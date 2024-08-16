@@ -1,4 +1,4 @@
-# special-fiesta
+# Proyecto Cafetería
 Proyecto de progra en python 
 
 Para este proyecto tengo en mente un menú para una cafetería. Esto sería desde la perspectiva del restaurante. Se le asignaría un precio a cada artículo en el menú. Al final, se haría una suma total de todos los artículos. Se pueden meter variaciones de tamaño en platillos y bebidas. Otra cosa que se me ocurre que podría ser interesante, es el manejo de un inventario, aunque este sea simulado. Se asignan unos valores de inredientes en existencia y con cada orden de platillo, se van descontando ingredientes del inventario. Para consultar cuanto queda de determinado ingrediente, solo se tiene que meter un input especificando el ingrediente que se quiere consultar. 
