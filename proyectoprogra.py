@@ -34,19 +34,24 @@ art_3=int(input("Precio tercer articulo:"))
 
 #Aquí cree variables para los precios de los artículos
 
-total_cuenta= art_1+art_2+art_3
-#Aquí es la suma de todos los articulos (osea la cuenta)
+def total_cuenta(art_1,art_2,art_3):
+    return art_1+art_2+art_3
+#Aquí utilicé mi primera función para sumar los precios de todos los articulos (osea la cuenta)
 
 pregunta=input("¿Entre cuantas personas gusta dividir su cuenta?")
-if pregunta == ("1"):
-    print("Su total es:$",total_cuenta)
-elif pregunta == ("2"):
-    print("El total por persona es:$",total_cuenta/2)
-elif pregunta == ("3"):
-    print("El total por persona es:$",total_cuenta/3)
-#Aqui meti una función por si gustan dividir la cuenta hasta un máximo de 3 personas y también es la parte del código
-# que imprime el total de la cuenta
+# Se pregunta el numero de personas para dividir la cuenta 
 
+def division_cuenta(pregunta):
+    if pregunta == ("1"):
+        return total_cuenta(art_1,art_2,art_3)/1
+    elif pregunta == ("2"):
+        return total_cuenta(art_1,art_2,art_3)/2
+    elif pregunta == ("3"):
+        return total_cuenta(art_1,art_2,art_3)/3
+#Esta es la función para dividir la cuenta
+    
+print("Su total es:",division_cuenta(pregunta),"pesos")
+#Aquí imprime la función de división de cuenta que a su vez tiene adentro la función de sumar productos
 
 print("¡Hasta luego!:)")
 # Este solo es un mensaje de despedida :)
