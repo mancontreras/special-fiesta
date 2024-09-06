@@ -56,6 +56,8 @@ print("Su total es:",division_cuenta(pregunta),"pesos")
 print("¡Hasta luego!:)")
 # Este solo es un mensaje de despedida :)
 
+#Ya había utilizado estructuras de decision. Quiero meterle más, pero necesito igual utilizar ciclos while y quiero seguir practicando con estos:)
+
 
 
 
