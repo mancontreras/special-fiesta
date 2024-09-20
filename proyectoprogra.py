@@ -1,67 +1,127 @@
-from selectors import SelectSelector
-
 print("""
-    ¿Qué va a querer? Le dejo nuestro menu:
-     Espresso sencillo --- $31
-     Espresso doble --- $38
-     Americano chico --- $35
-     Americano grande --- $58
-     Long black --- $35
-     Capuchino chico --- $49
-     Capuchino grande --- $58
-     Latte chico --- $49
-     Latte grande --- $58
-     Moka chico --- $56
-     Moka grande --- $65
-     Chai chico --- $63
-     Chai grande --- $74
-     Caramel chico --- $59
-     Caramel grande --- $69
-     Chocolate chico --- $56
-     Chocolate grande --- $63
-     Tizana --- $58
-     Te caliente --- $43
+    ¿Qué va a querer? Le dejo nuestro menu(ingrese el número el producto a elegir)(Ingresar 20 si se desea dejar de comprar):
+     (1)Espresso sencillo --- $31
+     (2)Espresso doble --- $38
+     (3)Americano chico --- $35
+     (4)Americano grande --- $58
+     (5)Long black --- $35
+     (6)Capuchino chico --- $49
+     (7)Capuchino grande --- $58
+     (8)Latte chico --- $49
+     (9)Latte grande --- $58
+     (10)Moka chico --- $56
+     (11)Moka grande --- $65
+     (12)Chai chico --- $63
+     (13)Chai grande --- $74
+     (14)Caramel chico --- $59
+     (15)Caramel grande --- $69
+     (16)Chocolate chico --- $56
+     (17)Chocolate grande --- $63
+     (18)Tizana --- $58
+     (19)Te caliente --- $43
+     (20) Dejar de comprar
 
     
-    Por el momento nuestro sistema solo puede manejar un total de 3 productos :,(
-    Favor de poner solo el precio de cada producto :)
+
     """)
-#Esta parte del código es para que el usuario pueda ver el menú con los precios
+#Este print lo utilicé para que el usuario pudiera ver el menú y saber que numero de producto corresponde a cada producto.
 
-art_1=int(input("Precio primer articulo:"))
-art_2=int(input("Precio segundo articulo:"))
-art_3=int(input("Precio tercer articulo:"))
-
-#Aquí cree variables para los precios de los artículos
-
-def total_cuenta(art_1,art_2,art_3):
-    return art_1+art_2+art_3
-#Aquí utilicé mi primera función para sumar los precios de todos los articulos (osea la cuenta)
-
-pregunta=input("¿Entre cuantas personas gusta dividir su cuenta?")
-# Se pregunta el numero de personas para dividir la cuenta 
-
-def division_cuenta(pregunta):
-    if pregunta == ("1"):
-        return total_cuenta(art_1,art_2,art_3)/1
-    elif pregunta == ("2"):
-        return total_cuenta(art_1,art_2,art_3)/2
-    elif pregunta == ("3"):
-        return total_cuenta(art_1,art_2,art_3)/3
-#Esta es la función para dividir la cuenta
+def cafeteria():
+    total=0
+    opcion=""
+    while opcion != 20:
+        
+        opcion=input("Elija una opcion del 1 al 20")
+        
+        if opcion == "1":
+            total =  total + 31
+            print("Total actual: $" ,total)
+        
+        elif opcion == "2":
+            total += 38
+            print("Total actual: $" ,total)
     
-print("Su total es:",division_cuenta(pregunta),"pesos")
-#Aquí imprime la función de división de cuenta que a su vez tiene adentro la función de sumar productos
+        elif opcion == "3":
+            total += 35
+            print("Total actual: $" ,total)
+            
+        elif opcion == "4":
+            total += 58
+            print("Total actual: $" ,total)
+            
+        elif opcion == "5":
+            total += 35
+            
+        elif opcion == "6":
+            total += 49
+            print("Total actual: $" ,total)
+            
+        elif opcion == "7":
+            total += 58
+            print("Total actual: $" ,total)
 
-print("¡Hasta luego!:)")
-# Este solo es un mensaje de despedida :)
+        elif opcion == "8":
+            total += 49
+            print("Total actual: $" ,total)
+            
+        elif opcion == "9":
+            total += 58
+            print("Total actual: $" ,total)
+            
+        elif opcion == "10":
+            total += 56
+            print("Total actual: $" ,total)
+            
+        elif opcion == "11":
+            total += 65
+            print("Total actual: $" ,total)
+            
+        elif opcion == "12":
+            total += 63
+            print("Total actual: $" ,total)
+            
+        elif opcion == "13":
+            total += 74
+            print("Total actual: $" ,total)
+            
+        elif opcion == "14":
+            total += 59
+            print("Total actual: $" ,total)
+            
+        elif opcion == "15":
+            total += 69
+            print("Total actual: $" ,total)
+            
+        elif opcion == "16":
+            total += 56
+            print("Total actual: $" ,total)
+            
+        elif opcion == "17":
+            total += 63
+            print("Total actual: $" ,total)
+            
+        elif opcion == "18":
+            total += 58
+            print("Total actual: $" ,total)
+            
+        elif opcion == "19":
+            total += 43
+            print("Total actual: $" ,total)
 
-#Ya había utilizado estructuras de decision. Quiero meterle más, pero necesito igual utilizar ciclos while y quiero seguir practicando con estos:)
+        elif opcion == "20":
+            print("El total es: $", total)
+            print("Gracias por visitarnos. Vuelva pronto :)")
+            
+#Esta función es la que se encarga de toda la operación. Dentro de esta, se encuentran operadores para calcular el total de la cuenta
+# y estructuras de decision para las opciones de bebidas que el cliente quiera. 
 
+cafeteria()
 
-
-
-
+#Esto solo es para llamar a la función principal.
+            
+            
+        
+        
 
 
 
