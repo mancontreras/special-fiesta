@@ -1,3 +1,28 @@
+menu = [
+    ["Espresso sencillo", 31],
+    ["Espresso doble", 38],
+    ["Americano chico", 35],
+    ["Americano grande", 58],
+    ["Long black", 35],
+    ["Capuchino chico", 49],
+    ["Capuchino grande", 58],
+    ["Latte chico", 49],
+    ["Latte grande", 58],
+    ["Moka chico", 56],
+    ["Moka grande", 65],
+    ["Chai chico", 63],
+    ["Chai grande", 74],
+    ["Caramel chico", 59],
+    ["Caramel grande", 69],
+    ["Chocolate chico", 56],
+    ["Chocolate grande", 63],
+    ["Tizana", 58],
+    ["Té caliente", 43]
+    ]
+
+#Cree una matriz que contiene las pequeñas listas del producto junto con su precio. Cuando se mande a llamar el número, solo tengo
+#que acceder a la matriz del producto seleccionado.
+
 print("""
     ¿Qué va a querer? Le dejo nuestro menu(ingrese el número el producto a elegir)(Ingresar 20 si se desea dejar de comprar):
      (1)Espresso sencillo --- $31
@@ -19,7 +44,7 @@ print("""
      (17)Chocolate grande --- $63
      (18)Tizana --- $58
      (19)Te caliente --- $43
-     (20) Dejar de comprar
+     (20)Dejar de comprar
 
     
 
@@ -32,111 +57,29 @@ def cafeteria():
     opcion=""
     while opcion != 20:
         
-        opcion=input("Elija una opcion del 1 al 20")
+        opcion=int(input("Elija una opcion del 1 al 20"))
         
-        if opcion == "1":
-            total =  total + 31
-            cuenta.append("Espresso sencillo")
-            print("Total actual: $" ,total)
         
-        elif opcion == "2":
-            total += 38
-            cuenta.append("Espresso doble")
-            print("Total actual: $" ,total)
-    
-        elif opcion == "3":
-            total += 35
-            cuenta.append("Americano chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "4":
-            total += 58
-            cuenta.append("Americano grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "5":
-            total += 35
-            cuenta.append("Long black")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "6":
-            total += 49
-            cuenta.append("Capuchino chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "7":
-            total += 58
-            cuenta.append("Capuchino grande")
-            print("Total actual: $" ,total)
-
-        elif opcion == "8":
-            total += 49
-            cuenta.append("Latte chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "9":
-            total += 58
-            cuenta.append("Latte grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "10":
-            total += 56
-            cuenta.append("Moka chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "11":
-            total += 65
-            cuenta.append("Moka grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "12":
-            total += 63
-            cuenta.append("Chai chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "13":
-            total += 74
-            cuenta.append("Chai grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "14":
-            total += 59
-            cuenta.append("Caramel chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "15":
-            total += 69
-            cuenta.append("Caramel grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "16":
-            total += 56
-            cuenta.append("Chocolate chico")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "17":
-            total += 63
-            cuenta.append("Chocolate grande")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "18":
-            total += 58
-            cuenta.append("Tizana")
-            print("Total actual: $" ,total)
-            
-        elif opcion == "19":
-            total += 43
-            cuenta.append("Té caliente")
-            print("Total actual: $" ,total)
-
-        elif opcion == "20":
+        if 1 <= opcion <= 19:
+            producto = menu[opcion-1][0]
+            precio = menu[opcion-1][1]
+            total+=precio
+            cuenta.append(producto)
+            print("Total Actual: $",total)
+        
+        elif opcion == 20:
             print("Su orden fue:", cuenta)
-            print("El total es: $", total)
-            print("Gracias por visitarnos. Vuelva pronto :)")
+            print("El total es: $",total)
+            print("Gracias por visitarnos, vuelva pronto :)")
+            
+
+
+
+            
             
 #Esta función es la que se encarga de toda la operación. Dentro de esta, se encuentran operadores para calcular el total de la cuenta
-# y estructuras de decision para las opciones de bebidas que el cliente quiera. Ademas añadí una lista con todos los productos
-#elegidos por el cliente para poder imprimir esa lista junto con el total de la cuenta. 
+# y estructuras de decision para las opciones de bebidas que el cliente quiera. El uso de matrices me ayudo a reducir el numero de ifs.
+#Ademas añadí una lista con todos los productos elegidos por el cliente para poder imprimir esa lista junto con el total de la cuenta. 
 
 cafeteria()
 
